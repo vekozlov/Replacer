@@ -1,9 +1,10 @@
-This simple programm removes some characters or words and paste new one instead.
-It can be helpfull, when it is necessary to change, for example, 1 tab to 2 spaces in a whole document or in a bunch of files (e.g. in whole project or folder). 
+This simple programm removes some characters or words and pastes new one instead.
+It can be helpfull, when it is necessary to change, for example, 1 tab to 2 spaces in a whole document or in a bunch of files (e.g. in a whole project or folder). 
 
 Using:
 
-  $ ruby replacer.rb 1.txt 2.rb 3.js 4.css controllers/
+  $ ruby replacer.rb controllers/ - to change files in whole directory
+  $ ruby replacer.rb 1.txt 2.txt - to change only these files
 
 Then programm asks you 3 questions:
 1. what character do you want to remove

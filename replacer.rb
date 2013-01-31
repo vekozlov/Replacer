@@ -12,7 +12,7 @@ end
 def replace_tabs_in_file(file) 
   extension = File.extname(file) 
   unless Unsupported_formats.include?(extension)
-    if @selected_formats.empty?  
+    if @selected_formats.length == 1 && @selected_formats.first == '.'
       edit_file(file) 
     else
       if @selected_formats.include?(extension)
