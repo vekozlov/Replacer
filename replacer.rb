@@ -1,19 +1,8 @@
-#  This simple programm remove some char or word and paste new one instead.
-#  It can be helpfull, when it is needed to change, for example, 1 tab to 2 spaces.
-#  It works with 1 document or with folders.
-
-#  Using:
-
-#    $ ruby tab_remover.rb 1.txt 2.rb 3.js 4.css controllers/
-
-#  Then programm asks you what character do you want to remove and what to paste instead.
-
-
-
 # coding: utf-8   
  
 Unsupported_formats = [".gif",".png",".jpg",".jpeg",".ttf",".otf"] 
-
+@selected_formats = []
+ 
 def edit_file(file) 
   file_text = File.readlines(file)
   file_text.each {|f| f.gsub!(@oldChar,@newChar)} 
@@ -50,8 +39,7 @@ def ask_questions
   p "What is the character, that you want to remove?"
   @oldChar = STDIN.gets.chomp
   p "What is the character, that you want instead of old one?"
-  @newChar = STDIN.gets.chomp   
-  @selected_formats = []
+  @newChar = STDIN.gets.chomp  
 
   format = '' 
   while format != '.' do 
